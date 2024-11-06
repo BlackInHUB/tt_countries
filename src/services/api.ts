@@ -16,27 +16,11 @@ const request = {
 }
 
 const api = {
-  getAvailableCountries: () => {
-    try {
-      return request.getAll<CountryShortInfo[]>('AvailableCountries')
-    } catch (error) {
-      console.log(error)
-    }
-  },
-  getCountryByCode: (countryCode: string) => {
-    try {
-      return request.getByCode<CountryInfo>('CountryInfo', countryCode)
-    } catch (error) {
-      console.log(error)
-    }
-  },
-  getCountryHolydays: (year: number, countryCode: string) => {
-    try {
-      return request.getHolidays<CountryHoliday[]>('PublicHolidays', year, countryCode)
-    } catch (error) {
-      console.log(error)
-    }
-  },
+  getAvailableCountries: () => request.getAll<CountryShortInfo[]>('AvailableCountries'),
+  getCountryByCode: (countryCode: string) =>
+    request.getByCode<CountryInfo>('CountryInfo', countryCode),
+  getCountryHolydays: (year: number, countryCode: string) =>
+    request.getHolidays<CountryHoliday[]>('PublicHolidays', year, countryCode),
 }
 
 export default api
