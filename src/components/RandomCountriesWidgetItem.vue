@@ -11,7 +11,9 @@ defineProps({
 </script>
 
 <template>
-  <li class="flex flex-col gap-5 p-10 border text-xl">
+  <li
+    class="flex flex-col gap-5 p-10 border border-amber-300 rounded bg-gray-800 text-xl text-amber-500"
+  >
     <p class="font-bold"><span>Country: </span>{{ country.name }}</p>
     <p class="font-bold"><span>Next holiday: </span>{{ country.holidayName }}</p>
     <p class="font-bold"><span>Holiday date: </span>{{ country.holidayDate }}</p>

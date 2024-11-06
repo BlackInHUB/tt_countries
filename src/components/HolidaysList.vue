@@ -13,6 +13,6 @@ defineProps({
 
 <template>
   <ul class="flex flex-col gap-5 w-[50%]">
-    <HolidaysListItem v-for="item in holidays" :key="item.name" :holiday="item" />
+    <HolidaysListItem v-for="(item, i) in holidays" :key="i" :holiday="item" />
   </ul>
 </template>

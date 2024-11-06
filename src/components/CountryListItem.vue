@@ -16,7 +16,9 @@ const handleClick = (countryCode: string) => {
 </script>
 
 <template>
-  <li class="border">
+  <li
+    class="border border-amber-300 text-amber-300 rounded hover:text-amber-500 hover:border-amber-500 transition-all hover:bg-gray-800"
+  >
     <button @click="() => handleClick(country.countryCode)" class="w-full h-12">
       {{ country.name }}
     </button>

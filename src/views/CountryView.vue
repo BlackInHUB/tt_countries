@@ -49,9 +49,14 @@ export default {
 <template>
   <main class="p-10">
     <section>
-      <p class="text-xl font-bold mb-5">{{ countryInfo.commonName }}</p>
+      <p class="text-xl text-amber-500 font-bold mb-5">{{ countryInfo.commonName }}</p>
       <HolidaysList class="mb-5" :holidays="holidays" />
-      <YearsPagination :years="years" :selectedYear="selectedYear" :setYear="setYear" />
+      <YearsPagination
+        v-if="holidays.length > 0"
+        :years="years"
+        :selectedYear="selectedYear"
+        :setYear="setYear"
+      />
     </section>
   </main>
 </template>

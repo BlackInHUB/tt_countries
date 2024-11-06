@@ -54,13 +54,19 @@ export default {
   <main class="flex p-10 gap-[100px]">
     <section class="w-[40%]">
       <SearchInput class="mb-5" v-model="searchValue" @input="handleSearch" />
-      <p class="text-xl font-bold mb-5">Countries List</p>
+      <p class="text-xl text-amber-500 font-bold mb-5">Countries List</p>
       <CountriesList :countries="availableCountries.filter((c) => c.name.includes(searchValue))" />
     </section>
     <section class="w-full">
-      <div class="p-5 border">
-        <p class="text-xl font-bold mb-5">Random Countries Widget</p>
-        <RandomCountriesWidget :countries="randomCountries" />
+      <div class="p-5 border border-amber-300 mt-[110px] rounded min-h-[750px] align-middle">
+        <p class="text-xl text-amber-500 font-bold mb-5">Random Countries Widget</p>
+        <div
+          v-if="randomCountries.length < 3"
+          class="w-full text-2xl text-amber-500 font-bold text-center"
+        >
+          <p>Loading...</p>
+        </div>
+        <RandomCountriesWidget v-else :countries="randomCountries" />
       </div>
     </section>
   </main>
