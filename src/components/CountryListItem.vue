@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <li class="border" :key="country.countryCode">
+  <li class="border">
     <button class="w-full h-12">{{ country.name }}</button>
   </li>
 </template>

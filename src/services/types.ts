@@ -1,9 +1,9 @@
-export interface CountryShortInfo {
+export type CountryShortInfo = {
   countryCode: string
   name: string
 }
 
-export interface CountryInfo {
+export type CountryInfo = {
   commonName: string
   officialName: string
   countryCode: string
@@ -13,7 +13,7 @@ export interface CountryInfo {
 
 type HolidayType = 'Public' | 'Bank' | 'School' | 'Authorities' | 'Optional' | 'Observance'
 
-export interface CountryHoliday {
+export type CountryHoliday = {
   date: string
   localName: string
   name: string
@@ -23,3 +23,5 @@ export interface CountryHoliday {
   launchYear: number
   types: [HolidayType]
 }
+
+export type CountryWithHoliday = CountryShortInfo & { holidayName: string; holidayDate: string }

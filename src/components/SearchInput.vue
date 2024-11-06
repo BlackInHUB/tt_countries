@@ -13,7 +13,7 @@ defineEmits(['update:modelValue'])
   <div class="relative">
     <input
       :value="modelValue"
-      class="p-4 border outline-none w-[50%]"
+      class="p-4 border outline-none w-[50%] rounded"
       type="text"
       placeholder="Search input"
       @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
