@@ -5,7 +5,7 @@ import CountryListItem from './CountryListItem.vue'
 
 defineProps({
   countries: {
-    type: Object as PropType<CountryShortInfo[]>,
+    type: Array as PropType<CountryShortInfo[]>,
     required: true,
   },
   searchValue: {
